@@ -1,0 +1,42 @@
+{
+  "name": "ezverify-mcp",
+  "version": "1.0.5",
+  "description": "MCP server that connects Claude AI to the EzVerify email verification API",
+  "type": "module",
+  "bin": {
+    "ezverify-mcp": "./dist/index.js"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "node --watch dist/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "email-verification",
+    "ezverify",
+    "claude",
+    "ai",
+    "model-context-protocol"
+  ],
+  "license": "MIT",
+  "homepage": "https://ezverify.app",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jefferyleo/ezverify-mcp"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.10.2"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.4.0"
+  }
+}
