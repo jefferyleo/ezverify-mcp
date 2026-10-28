@@ -1,0 +1,31 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.jefferyleo/ezverify-mcp",
+  "title": "EzVerify Email Verification",
+  "description": "Verify email addresses with EzVerify. Needs an EzVerify Starter or Business plan.",
+  "websiteUrl": "https://ezverify.app",
+  "repository": {
+    "url": "https://github.com/jefferyleo/ezverify-mcp",
+    "source": "github"
+  },
+  "version": "1.0.8",
+  "packages": [
+    {
+      "registryType": "npm",
+      "registryBaseUrl": "https://registry.npmjs.org",
+      "identifier": "ezverify-mcp",
+      "version": "1.0.8",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "EZVERIFY_API_KEY",
+          "description": "EzVerify API key. Needs a Starter or Business plan; generate one at https://ezverify.app/Dashboard/ApiUsage",
+          "isRequired": true,
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
