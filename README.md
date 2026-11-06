@@ -156,7 +156,7 @@ Node.js 18 or newer. The server runs through `npx`, which downloads and starts i
 Log in to your EzVerify dashboard at [ezverify.app](https://ezverify.app), open **API Usage** ([ezverify.app/Dashboard/ApiUsage](https://ezverify.app/Dashboard/ApiUsage)) and generate a key there. It is shown once, so copy it and store it safely; if you lose it, regenerate it on the same page. API keys only work on the Starter and Business plans.
 
 **Does this use my EzVerify credits?**
-Yes, `verify_email` and `verify_emails_bulk` do. They use the same credits as a direct API call, at your plan's rates. `valid`, `invalid` and `risky` results use a credit, except shared inboxes such as info@ that are marked `risky` without a mailbox check; `unknown` results are free. Checking the same address in a separate call is charged again.
+Yes, `verify_email` and `verify_emails_bulk` do. They use the same credits as a direct API call, at your plan's rates. `valid`, `invalid` and `risky` results use a credit; `unknown` results are free. Checking the same address in a separate call is charged again.
 
 **Is my API key safe?**
 The server reads your API key from your local configuration and sends it only to the EzVerify API. It does not store or log it. Treat the key like a password, and regenerate it on the API Usage page if it leaks.

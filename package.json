@@ -1,6 +1,6 @@
 {
   "name": "ezverify-mcp",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "mcpName": "io.github.jefferyleo/ezverify-mcp",
   "description": "MCP server that connects Claude AI to the EzVerify email verification API",
   "type": "module",
