@@ -55,7 +55,7 @@ const TOOLS: Tool[] = [
   {
     name: "verify_email",
     title: "Verify an email address",
-    description: "Verify a single email address. Returns status (valid/invalid/risky/unknown), deliverability score, syntax/domain/MX/SMTP flags, disposable domain detection, role account flag, typo suggestion, and mailbox-full status. Uses credits: 1 credit for a definitive result (valid, invalid or risky); unknown results are free. Checking the same address again is charged again.",
+    description: "Verify a single email address. Returns status (valid/invalid/risky/unknown), deliverability score, syntax/domain/MX/SMTP flags, disposable domain detection, role account flag, typo suggestion, and mailbox-full status. Uses credits: 1 credit for a definitive result (valid, invalid or risky); unknown results and shared inboxes such as info@ that are marked risky without a mailbox check are free. Checking the same address again is charged again.",
     inputSchema: {
       type: "object",
       properties: {
@@ -74,7 +74,7 @@ const TOOLS: Tool[] = [
   {
     name: "verify_emails_bulk",
     title: "Verify a list of email addresses (bulk job)",
-    description: "Submit an async bulk email verification job (up to 1,000 emails per request; duplicate addresses are verified and billed once). Returns a request_id — poll with get_bulk_job_status. Uses credits: 1 credit per address with a definitive result (valid, invalid or risky), charged when the job completes; unknown results are free.",
+    description: "Submit an async bulk email verification job (up to 1,000 emails per request; duplicate addresses are verified and billed once). Returns a request_id — poll with get_bulk_job_status. Uses credits: 1 credit per address with a definitive result (valid, invalid or risky, except shared inboxes such as info@ marked risky without a mailbox check), charged when the job completes; unknown results are free.",
     inputSchema: {
       type: "object",
       properties: {
